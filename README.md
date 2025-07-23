@@ -13,7 +13,10 @@
 - **帳務（Accounting）**
     1. 未實現損益（持股）
     2. 已實現損益
-    3. 股利（待確認）
+   （尚無法直接查詢配發的股利）
+
+<!-- Shioaji 目前沒有查詢「個人持股實際領到的股利」API。
+如果想要「真實總收益」＝ 買賣損益 + 股利，必須手動合併券商對帳單或資金明細的配息紀錄。 -->
 
 ## 2. 架構
 ```
@@ -28,7 +31,7 @@ sj-trading
         ├── login.py                   # API 登入流程
         ├── market_data.py             # 報價、行情查詢
         ├── order.py                   # 下單
-        ├── accounting_profitloss.py   # 帳務查詢：如已實現損益等
+        ├── accounting_profitloss.py   # 帳務查詢：如未實現損益、已實現損益等
         └── ...
 ├── .venv
 ├── .python-version
