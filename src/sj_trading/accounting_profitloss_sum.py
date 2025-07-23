@@ -7,7 +7,7 @@ def profitloss_sum():
     # 已實現損益
     # 查詢區間設限為12個月的區間
     
-    profitloss_sum = api.list_profit_loss_summary(api.stock_account,'2025-01-01','2025-06-30')
+    profitloss_sum = api.list_profit_loss_summary(api.stock_account,'2025-01-01','2025-07-22')
     # print(profitloss_sum)
     df = pd.DataFrame(pnl.__dict__ for pnl in profitloss_sum.profitloss_summary)
     total_dict = profitloss_sum.total.__dict__

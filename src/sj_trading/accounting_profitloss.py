@@ -9,7 +9,7 @@ def profitloss():
     api = get_api() 
     # 已實現損益
     # 查詢區間設限為12個月的區間
-    profitloss = api.list_profit_loss(api.stock_account,'2025-01-01','2025-06-30')
+    profitloss = api.list_profit_loss(api.stock_account,'2025-01-01','2025-07-22')
     print(profitloss)
 
     df = pd.DataFrame(pnl.__dict__ for pnl in profitloss)
@@ -22,7 +22,7 @@ def profitloss():
         "https://www.googleapis.com/auth/drive.file",
         "https://www.googleapis.com/auth/drive"
     ]
-    creds = ServiceAccountCredentials.from_json_keyfile_name('/Users/e0121n/Documents/Codelearning/Python/Projects/auto_gsheet_bot/auto_gsheet_bot_account_key.json', scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name('/Users/e0121n/Documents/sj-trading/secrets/auto_gsheet_bot_account_key.json', scope)
     client = gspread.authorize(creds)
 
     # 5. 連線到你的 Google Sheet（用網址 key）

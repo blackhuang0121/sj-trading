@@ -73,7 +73,7 @@ if __name__ == "__main__":
     print(df)
 
 # 歷史行情：單一個股
-def get_stock_kbars(stock_code="2890", start="2025-01-01", end="2025-06-27"):
+def get_stock_kbars(stock_code="2890", start="2025-01-01", end="2025-07-22"):
     api = get_api()
     contract = api.Contracts.Stocks[stock_code]
     kbars = api.kbars(
@@ -89,7 +89,7 @@ def get_stock_kbars(stock_code="2890", start="2025-01-01", end="2025-06-27"):
     return df
 
 # 歷史行情：複數個個股
-def get_multi_stock_kbars(stock_codes=["2330", "2357"], start="2025-01-01", end="2025-06-27"):
+def get_multi_stock_kbars(stock_codes=["2330", "2357"], start="2025-01-01", end="2025-07-22"):
     api = get_api()
     dfs = []
     for stock_code in stock_codes:
