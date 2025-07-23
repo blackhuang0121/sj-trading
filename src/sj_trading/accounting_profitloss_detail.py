@@ -9,7 +9,7 @@ def profitloss_detail(target_code="2357"):
     # 查所有已實現損益
     profitloss = api.list_profit_loss(api.stock_account, "2025-01-01", "2025-07-22")
     print("所有已實現損益紀錄：")
-    # 1. print 出所有含該股票代碼的 id
+    # 1. print 出所有含該股票代碼的 id，呈現手續費、稅，沒有直接的已實現損益
     found = False
     for i, p in enumerate(profitloss):
         if hasattr(p, "code") and p.code == target_code:
