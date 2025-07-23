@@ -10,7 +10,7 @@ def list_profitloss():
     # 已實現損益，包含稅費的所有明細
     # 查詢區間設限為12個月的區間
     # 第一步：查所有已實現損益
-    profitloss = api.list_profit_loss(api.stock_account, "2025-01-01", "2025-06-30")
+    profitloss = api.list_profit_loss(api.stock_account, "2025-01-01", "2025-07-22")
     print("已實現損益查詢結果：")
     for i, p in enumerate(profitloss):
         print(i, p.id, p)
@@ -31,7 +31,7 @@ def list_profitloss():
         "https://www.googleapis.com/auth/drive.file",
         "https://www.googleapis.com/auth/drive"
     ]
-    creds = ServiceAccountCredentials.from_json_keyfile_name('/Users/e0121n/Documents/Codelearning/Python/Projects/auto_gsheet_bot/auto_gsheet_bot_account_key.json', scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name('/Users/e0121n/Documents/sj-trading/secrets/auto_gsheet_bot_account_key.json', scope)
     client = gspread.authorize(creds)
 
     # 5. 連線到你的 Google Sheet（用網址 key）

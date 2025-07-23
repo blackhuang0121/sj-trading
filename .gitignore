@@ -24,3 +24,7 @@ wheels/
 
 # Python lock file
 uv.lock
+
+# GSheet API 金鑰
+secrets/
+auto_gsheet_bot_account_key.json
