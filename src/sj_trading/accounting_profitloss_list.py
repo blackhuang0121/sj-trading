@@ -28,6 +28,8 @@ def profitloss():
     # 5. 連線到你的 Google Sheet（用網址 key）
     spreadsheet = client.open_by_key('1VENNdDiBglXuO1bTlGp3Fl-G1Z9c_GRLgRGdEAWo6D8')  # 取網址 d/ 與 /edit 之間那串
     sheet = spreadsheet.worksheet('api_profitloss')  # 分頁名稱
+    # spreadsheet = client.open_by_key('1VENNdDiBglXuO1bTlGp3Fl-G1Z9c_GRLgRGdEAWo6D8')  # 取網址 d/ 與 /edit 之間那串
+    # sheet = spreadsheet.worksheet('api_profitloss_past')  # 分頁名稱
 
     # 6. 讀取舊資料並合併
     try:
