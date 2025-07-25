@@ -38,6 +38,7 @@ snapshots_df = "sj_trading.market_data:get_snapshots_df"
 top_volume = "sj_trading.market_data:get_top_volume_stocks"
 kbars = "sj_trading.market_data:get_stock_kbars"
 multi_kbars = "sj_trading.market_data:get_multi_stock_kbars"
+ex_dividend_amt = "sj_trading.ex_dividend_amt:exDividendAmt"
 
 [build-system]
 requires = ["hatchling"]
