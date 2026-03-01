@@ -4,7 +4,7 @@ from .login import get_api
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 
-def profitloss_sum(year=2025):
+def profitloss_sum(year=2026):
     api = get_api() 
     # 1. 取得 已實現損益總計
     profitloss_sum = api.list_profit_loss_summary(api.stock_account, f'{year}-01-01', f'{year}-12-31')

@@ -26,7 +26,7 @@ def stock_ordering():
     # 建立委託下單的 Order
     order = sj.order.StockOrder(
         action=Action.Buy, # 買進
-        price=20.7,
+        price=10.5,
         # contract.reference, # 以平盤價買進
         quantity=1, # 下單數量
         price_type=StockPriceType.LMT, # 限價單
