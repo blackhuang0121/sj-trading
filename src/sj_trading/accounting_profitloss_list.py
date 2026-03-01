@@ -9,7 +9,7 @@ def profitloss():
     api = get_api() 
     # 已實現損益
     # 查詢區間設限為12個月的區間
-    profitloss = api.list_profit_loss(api.stock_account,'2025-01-01','2025-07-22')
+    profitloss = api.list_profit_loss(api.stock_account,'2025-07-23','2026-02-13')
     print(profitloss)
 
     df = pd.DataFrame(pnl.__dict__ for pnl in profitloss)
